@@ -1,16 +1,6 @@
 import { createStackNavigator } from "@react-navigation/stack";
 
-// import LoginScreen from "../scenes/login";
-
-// const AuthNavigatorConfig = {
-//   initialRouteName: "Login",
-//   header: null,
-//   headerMode: "none",
-// };
-
-// const RouteConfigs = {
-//   Login: LoginScreen,
-// };
+import LoginScreen from "../scenes/Login";
 
 const AuthNavigator = createStackNavigator();
 

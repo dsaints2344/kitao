@@ -1,13 +1,20 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
+import { createStackNavigator } from "@react-navigation/stack";
+import { NavigationContainer } from "@react-navigation/native";
+import { Landing, Login } from "./src/scenes";
+
+const StackNavigator = createStackNavigator();
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <StackNavigator.Navigator headerMode="none" initialRouteName="Landing">
+        <StackNavigator.Screen name="Landing" component={Landing} />
+        <StackNavigator.Screen name="Login" component={Login} />
+      </StackNavigator.Navigator>
+    </NavigationContainer>
   );
 }
 
