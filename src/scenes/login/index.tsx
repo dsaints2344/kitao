@@ -1,18 +1,18 @@
 import React from "react";
 import { StyleSheet, Text, View, Image, Alert, Dimensions } from "react-native";
 import { darkOrange, lightGray, black } from "../../styles/colors";
-import { NavigationProp } from "@react-navigation/native";
 import {
   RectButton,
   TouchableOpacity,
   TextInput,
 } from "react-native-gesture-handler";
 import { Button } from "../../components/atoms";
+import { NavigationProp } from "@react-navigation/native";
 import { SafeAreaView } from "react-native-safe-area-context";
 const { width } = Dimensions.get("window");
 
 interface LoginProps {
-  navigation: any;
+  navigation: NavigationProp<any, any>;
 }
 
 const Login = ({ navigation }: LoginProps) => {
