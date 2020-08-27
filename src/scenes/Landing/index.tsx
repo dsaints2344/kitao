@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { StyleSheet, Text, View, Image, Alert, Dimensions } from "react-native";
 import { darkOrange, lightGray } from "../../styles/colors";
 import { RectButton, TouchableOpacity } from "react-native-gesture-handler";
 import { Button } from "../../components/atoms";
 import { NavigationProp } from "@react-navigation/native";
+import { useSelector } from "react-redux";
 
 interface LandingProps {
   navigation: NavigationProp<any, any>;
@@ -12,6 +13,11 @@ interface LandingProps {
 const { width } = Dimensions.get("window");
 
 const Landing = ({ navigation }: LandingProps) => {
+  const state = useSelector((state) => state);
+
+  useEffect(() => {
+    console.log(state);
+  }, []);
   return (
     <View style={styles.container}>
       <Image

@@ -9,6 +9,8 @@ import {
 import { Button } from "../../components/atoms";
 import { NavigationProp } from "@react-navigation/native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import FormInput from "../../components/atoms/FormInput";
+import TextLabel from "../../components/atoms/TextLabel";
 const { width } = Dimensions.get("window");
 
 interface LoginProps {
@@ -25,12 +27,22 @@ const Login = ({ navigation }: LoginProps) => {
         variant="primary"
       />
 
-      <Text style={styles.text}>Iniciar Sesión</Text>
+      <TextLabel style={styles.text}>Iniciar Sesión</TextLabel>
 
-      {/* CREATE INPUT COMPONENT */}
+      {/* PUT THIS INTO FORM COMPONENT WITH FORMIK */}
       <View style={styles.inputContainer}>
-        <TextInput placeholder="Correo Electronico" style={styles.input} />
-        <TextInput placeholder="Contraseña" style={styles.input} />
+        <FormInput
+          onChangeText={() => {}}
+          withLabel={true}
+          label="Correo Electronico"
+        />
+
+        <FormInput
+          withLabel={true}
+          label="Contraseña"
+          onChangeText={() => {}}
+          type="password"
+        />
       </View>
 
       <Button
