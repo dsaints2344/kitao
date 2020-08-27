@@ -4,8 +4,7 @@ import { Text, StyleSheet } from "react-native";
 // Constants
 
 import { moderateScale } from "../../utils/ScalingScreen";
-import { black } from "_styles";
-import { white } from "_styles";
+import { black, white } from "../../styles/colors";
 
 interface TextLabelProps {
   color?: string;

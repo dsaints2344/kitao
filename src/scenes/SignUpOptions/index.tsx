@@ -5,14 +5,15 @@ import { RectButton, TouchableOpacity } from "react-native-gesture-handler";
 import { Button } from "../../components/atoms";
 import { NavigationProp } from "@react-navigation/native";
 import { useSelector } from "react-redux";
+import TextLabel from "../../components/atoms/TextLabel";
 
-interface LandingProps {
+interface SignUpOptionsProps {
   navigation: NavigationProp<any, any>;
 }
 
 const { width } = Dimensions.get("window");
 
-const Landing = ({ navigation }: LandingProps) => {
+const SignUpOptions = ({ navigation }: SignUpOptionsProps) => {
   const state = useSelector((state) => state);
 
   return (
@@ -22,16 +23,34 @@ const Landing = ({ navigation }: LandingProps) => {
         source={require("../../assets/images/logo_vectorized.png")}
       />
 
+      <TextLabel
+        style={{
+          textAlign: "left",
+          fontSize: 25,
+          alignSelf: "flex-start",
+          marginLeft: 20,
+          marginBottom: 10,
+          fontWeight: "500",
+        }}
+      >
+        Crear una Cuenta
+      </TextLabel>
+
       <Button
-        label={"Crear cuenta"}
-        onPress={() => navigation.navigate("SignUpOptions")}
+        label={"Usar Gmail"}
+        logo={require("../../assets/images/google-icon.png")}
+        onPress={() => Alert.alert("Crear cuenta con Gmail")}
         style={styles.button}
         variant="primary"
       />
-      <TouchableOpacity
-        style={styles.text}
-        onPress={() => navigation.navigate("Login")}
-      >
+
+      <Button
+        label={"Crear cuenta"}
+        onPress={() => navigation.navigate("SignUp")}
+        style={styles.button}
+        variant="primary"
+      />
+      <TouchableOpacity>
         <Text style={styles.text}>
           ¿Ya tienes una cuenta?{" "}
           <Text style={{ color: "blue" }}>Iniciar Sesión</Text>
@@ -41,7 +60,7 @@ const Landing = ({ navigation }: LandingProps) => {
   );
 };
 
-export default Landing;
+export default SignUpOptions;
 
 const styles = StyleSheet.create({
   container: {

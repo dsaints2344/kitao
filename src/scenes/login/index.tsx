@@ -16,10 +16,9 @@ const { width } = Dimensions.get("window");
 interface LoginProps {
   navigation: NavigationProp<any, any>;
 }
-
 const Login = ({ navigation }: LoginProps) => {
   return (
-    <SafeAreaView style={styles.container}>
+    <View style={styles.container}>
       <Button
         label={"Reiniciar contraseña"}
         onPress={() => Alert.alert("Crear cuenta")}
@@ -51,7 +50,7 @@ const Login = ({ navigation }: LoginProps) => {
         onPress={() => Alert.alert("Iniciar Sesión")}
         style={styles.loginButton}
       />
-    </SafeAreaView>
+    </View>
   );
 };
 

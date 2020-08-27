@@ -30,7 +30,7 @@ const icnDatePicker = require("./Images/icn-date-picker.png");
 interface FormInputProps {
   maxLength?: number;
   keyboardType?: string;
-  onChangeText: () => void;
+  onChangeText: (value: any) => void;
   onBlur?: () => void;
   placeholder?: string;
   type?: "picker" | "date" | "switch" | "password";
