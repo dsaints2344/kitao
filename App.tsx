@@ -3,7 +3,7 @@ import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from "@react-navigation/native";
-import { Landing, Login, SignUpOptions } from "./src/scenes";
+import { Landing, SignUpOptions, Login } from "./src/scenes";
 import { SignUp, EmployeeSignUp, EmployerSignUp } from "./src/scenes/SignUp";
 
 // Redux

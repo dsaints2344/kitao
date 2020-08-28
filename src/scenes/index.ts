@@ -1,4 +1,6 @@
+import SignUp from "_scenes";
+
 export { default as Landing } from "./Landing";
-export { default as Login } from "./Login";
+export { default as Login } from "./login";
 export { default as SignUpOptions } from "./SignUpOptions";
-export { default as SignUp } from "./SignUp";
+export { SignUp } from "./SignUp";
